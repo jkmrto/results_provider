@@ -1,0 +1,7 @@
+package result;
+message PeriodResult {
+    required uint32 home_goals = 1;
+    required uint32 away_goals = 2;
+    required string result = 3;
+  
+  }

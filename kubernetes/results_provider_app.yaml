@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: results-provider
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: results-provider
+      labels:
+        app: results-provider
+    spec:
+      containers:
+      - name: results-provider
+        image: results_provider  # The image should be pulled from a registry in a real kubernetes cluster
+        imagePullPolicy: Never # This should be settled to True in a real kubernetes cluster      
+        ports:
+        - containerPort: 4000
+          name: web 
+        # readinessProbe:  
+        #   httpGet:
+        #     path: /ready
+        #     port: 4000
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 60                               

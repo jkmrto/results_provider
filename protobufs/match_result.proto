@@ -1,0 +1,10 @@
+package result;
+message MatchResult {
+  required uint32 id = 1;
+  required string date = 2;
+  required string home_team = 3;
+  required string away_team = 4;
+  required PeriodResult ht = 5;
+  required PeriodResult ft = 6;
+
+}

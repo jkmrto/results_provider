@@ -1,0 +1,6 @@
+package result;
+message Results {
+    required string league = 1;
+    required string season = 2;
+    repeated MatchResult results = 3;
+  }

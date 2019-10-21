@@ -1,0 +1,15 @@
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  rules:
+  - host: testhost
+    http:
+      paths:
+      - path: /results-provider
+        backend:
+          serviceName: results-provider
+          servicePort: 4000 
+  
